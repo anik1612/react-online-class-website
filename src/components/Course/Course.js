@@ -1,5 +1,7 @@
 import React from 'react';
 import './Course.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 
 const Course = (props) => {
     const { name, img, price, instructor } = props.course;
@@ -15,7 +17,7 @@ const Course = (props) => {
                         <h6>Instructor: {instructor}</h6>
                         <h4 className="price">${price}</h4>
                         <button className="btn btn-sm btn-success"
-                            onClick={() => addToCart(props.course)}>Enroll Now</button>
+                            onClick={() => addToCart(props.course)}><FontAwesomeIcon icon={faPlusCircle} /> Enroll Now</button>
                     </div>
                 </div>
             </div>
